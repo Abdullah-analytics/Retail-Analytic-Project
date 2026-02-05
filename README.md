@@ -24,7 +24,7 @@ The main focus is on using **PostgreSQL** for data extraction and analysis, and 
 1. Clean and preprocess the dataset in PostgreSQL  
 2. Build queries to extract key metrics  
 3. Create visualizations and dashboards in Power BI  
-4. Summarize insights and recommendations  
+4. Summarize insights and recommendations 
 
 
 ## Author
