@@ -26,9 +26,6 @@ The main focus is on using **PostgreSQL** for data extraction and analysis, and 
 3. Create visualizations and dashboards in Power BI  
 4. Summarize insights and recommendations  
 
-## Author
-Muhammad Abdullah – [GitHub Profile](https://github.com/Abdullah-analytics)
-
 
 ## Author
 Muhammad Abdullah – [GitHub Profile](https://github.com/Abdullah-analytics)
