@@ -1,0 +1,48 @@
+
+--Q Identify products that were top-selling in 2009-2010 but dropped in 2011
+WITH PRODUCT_YEARLY_REVENUE AS (
+    -- Calculate total revenue per product per year
+    SELECT
+        DESCRIPTION,
+        YEARS,
+        SUM(UNITPRICE * QUANTITY) AS REVENUE
+    FROM ONLINE_RETAIL_MASTER_TABLE
+    GROUP BY DESCRIPTION, YEARS
+),
+
+REVENUE_2009_2010 AS (
+    -- Aggregate revenue for 2009-2010
+    SELECT
+        DESCRIPTION,
+        SUM(CASE WHEN YEARS IN (2009, 2010) THEN REVENUE END) AS REVENUE_2009_2010
+    FROM PRODUCT_YEARLY_REVENUE
+    GROUP BY DESCRIPTION
+),
+
+REVENUE_2011 AS (
+    -- Aggregate revenue for 2011
+    SELECT
+        DESCRIPTION,
+        SUM(CASE WHEN YEARS = 2011 THEN REVENUE END) AS REVENUE_2011
+    FROM PRODUCT_YEARLY_REVENUE
+    GROUP BY DESCRIPTION
+),
+
+REVENUE_DROP AS (
+    -- Calculate revenue drop between the two periods
+    SELECT
+        a.DESCRIPTION,
+        a.REVENUE_2009_2010,
+        b.REVENUE_2011,
+        (a.REVENUE_2009_2010 - b.REVENUE_2011) AS DROP_AMOUNT
+    FROM REVENUE_2009_2010 AS a
+    LEFT JOIN REVENUE_2011 AS b
+        ON a.DESCRIPTION = b.DESCRIPTION
+    WHERE a.REVENUE_2009_2010 IS NOT NULL
+      AND b.REVENUE_2011 IS NOT NULL
+)
+
+-- Show products ordered by biggest drop first
+SELECT *
+FROM REVENUE_DROP
+ORDER BY DROP_AMOUNT DESC;
