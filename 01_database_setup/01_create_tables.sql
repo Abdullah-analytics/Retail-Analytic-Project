@@ -1,0 +1,57 @@
+DROP TABLE IF EXISTS ONLINE_RETAIL1
+
+CREATE TABLE ONLINE_RETAIL
+                ID SERIAL PRIMARY KEY ,
+				InvoiceNo   VARCHAR(20),
+				StockCode   VARCHAR(20),
+				Description	VARCHAR(150),
+				Quantity    INTEGER,
+				InvoiceDate TIMESTAMP,
+				UnitPrice	NUMERIC(10,2)  ,
+				CustomerID	INTEGER,
+				Country    VARCHAR(50)
+				);
+
+DROP TABLE IF EXISTS ONLINE_RETAIL
+
+CREATE TABLE ONLINE_RETAIL1(
+                ID SERIAL PRIMARY KEY ,
+				InvoiceNo   VARCHAR(20),
+				StockCode   VARCHAR(20),
+				Description	VARCHAR(150),
+				Quantity    INTEGER,
+				InvoiceDate TIMESTAMP,
+				UnitPrice	NUMERIC(10,2)  ,
+				CustomerID	INTEGER,
+				Country    VARCHAR(50)
+				);
+
+
+DROP TABLE IF EXISTS ONLINE_RETAIL_MASTER_TABLE
+CREATE TABLE ONLINE_RETAIL_MASTER_TABLE(
+                ID SERIAL PRIMARY KEY ,
+				InvoiceNo   VARCHAR(20),
+				StockCode   VARCHAR(20),
+				Description	VARCHAR(150),
+				Quantity    INTEGER,
+				InvoiceDate TIMESTAMP,
+				UnitPrice	NUMERIC(10,2)  ,
+				CustomerID	INTEGER,
+				Country    VARCHAR(50)
+				);
+
+-- DATA OF YEAR 2009 TO 2010
+SELECT * FROM  ONLINE_RETAIL1
+LIMIT 10
+-- DATA  OF YEAR 2010 TO 2011
+SELECT * FROM  ONLINE_RETAIL
+LIMIT 10
+
+-- SELECT ALL DATA FROM MASTER TABLE
+SELECT * FROM ONLINE_RETAIL_MASTER_TABLE
+
+
+
+
+
+
