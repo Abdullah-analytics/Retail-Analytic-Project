@@ -1,3 +1,5 @@
+-- Week 2 - Customer analysis including churn, spending growth, and RFM segmentation completed
+
 --Q Identify customers who increased their spending the most between 2009 and 2010
 WITH CUSTOMERS_SPENDING AS (
     -- Calculate total spending per customer per year

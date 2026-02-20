@@ -1,3 +1,4 @@
+-- Week 2 - Customer analysis including churn, spending growth, and RFM segmentation completed
 
 -- What is the longest consecutive purchase streak (in days) for each customer?
 

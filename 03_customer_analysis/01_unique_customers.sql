@@ -1,3 +1,5 @@
+-- Week 2 - Customer analysis including churn, spending growth, and RFM segmentation completed
+
 --How has the number of unique customers changed year-over-year?
 
 -- Calculate total orders per customer for 2009 and 2010

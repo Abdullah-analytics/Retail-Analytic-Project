@@ -1,3 +1,4 @@
+-- Week 2 - Customer analysis including churn, spending growth, and RFM segmentation completed
 
 --Q1  Churn rate: customers who bought in 2009 but not in 2010
 WITH CUSTOMERS_2009 AS (

@@ -1,3 +1,4 @@
+-- Week 2 - Customer analysis including churn, spending growth, and RFM segmentation completed
 
 --Identify customers with the highest increase in cancellation / return rate across years
 

@@ -1,3 +1,4 @@
+-- Week 2 - Customer analysis including churn, spending growth, and RFM segmentation completed
 
 -- Q1 Customer Value using Recency, Frequency, Monetary (PostgreSQL-ready)
 
