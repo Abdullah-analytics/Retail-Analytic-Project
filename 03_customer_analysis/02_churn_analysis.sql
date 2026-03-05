@@ -25,6 +25,9 @@ FROM CHURNED_CUSTOMERS;
 
 
 
+
+
+
 --Q2 Churn rate: customers who bought in 2009-2010 but did NOT buy in 2011
 WITH CUSTOMER_FROM_2009_TO_2010 AS (
     -- All unique customers from 2009 and 2010
